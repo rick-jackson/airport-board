@@ -1,0 +1,32 @@
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: #1eb7ee;
+  align-items: center;
+  box-shadow: -2px 3px 25px 2px rgba(0, 0, 0, 0.54);
+
+  &__logo {
+    cursor: pointer;
+    margin-left: 50px;
+    width: 180px;
+    height: 67px;
+  }
+
+  &__nav {
+    color: #fff;
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+  }
+  
+  &__nav-item {
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

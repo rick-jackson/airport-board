@@ -1,0 +1,60 @@
+.no-flight-text {
+  margin: auto;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.flight-list {
+  padding: 50px;
+  display: flex;
+  min-height: 500px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.lists {
+  font-size: 24px;
+  line-height: 70px;
+  width: 100%;
+  text-align: left;
+
+  thead {
+    color: grey;
+  }
+
+  &__airline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__item-logo {
+    display: block;
+    width: 100px;
+    margin-right: 50px;
+  }
+
+  &__line {
+    height: 90px;
+  }
+
+  &__item-terminal {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 50px;
+    font-weight: 700;
+
+    &_green {
+      color: #7dc458;
+      border: 2px solid #7dc458;
+    }
+    
+    &_blue {
+      color: #53b5e9;
+      border: 2px solid #53b5e9;
+    }
+  }
+}
