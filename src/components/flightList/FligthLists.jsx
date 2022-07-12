@@ -18,15 +18,15 @@ const FlightLists = ({ lists, searchText }) => {
         </tr>
       </thead>
       <tbody>
-        {(searchText.length == 0 &&
+        {(searchText.length === 0 &&
           lists
             .map((flightData) => {
             return <CreateList  key={flightData.ID} flightData={flightData} />;
           })) ||
           lists
             .filter((flightData) =>{
-               return  flightData["airportToID.city_en"] == searchText ||
-                flightData[["airportFromID.city_en"]] == searchText ||
+               return  flightData["airportToID.city_en"] === searchText ||
+                flightData[["airportFromID.city_en"]] === searchText ||
                 flightData.codeShareData[0].codeShare === searchText}
             )
             .map((flightData) => {
