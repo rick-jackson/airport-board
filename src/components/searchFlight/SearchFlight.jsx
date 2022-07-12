@@ -32,7 +32,7 @@ const SearchFlight = ({
   useEffect(() => {
     const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
     newPath(url, searchData);
-  },[navigate, url, searchData]);
+  },[]);
 
   return (
     <>

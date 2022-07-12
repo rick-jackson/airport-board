@@ -32,7 +32,7 @@ const Main = ({ getFlightList, flightData }) => {
 
   useEffect(() => {
     getFlightList(newSearchDate);
-  });
+  },[]);
 
   const styleBtnActive = {
     background: "#fff",
