@@ -1,7 +1,3 @@
-
-
-### `npm start`
-
 # airport-board
 
 # [Link](https://eloquent-crisp-e1d0f1.netlify.app/)
