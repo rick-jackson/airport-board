@@ -28,11 +28,11 @@ const SearchFlight = ({
     date: searchDate,
   });
 
-  const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
-
+  
   useEffect(() => {
+    const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
     newPath(url, searchData);
-  }, []);
+  },[navigate, url, searchData]);
 
   return (
     <>
