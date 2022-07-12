@@ -7,7 +7,7 @@ const HomePage = ({ getSearchText, getSearchDate }) => {
   useEffect(() => {
     getSearchText("");
     getSearchDate('01-01-2022');
-  }, []);
+  });
   return <Search getSearchText={getSearchText} searchText={searchText} isHomePage={true}/>;
 };
 
