@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import Search from "../search/Search";
-const HomePage = ({ getSearchText, getSearchDate }) => {
-  const searchText = ''
+const HomePage = ({getSearchText, getSearchDate }) => {
   useEffect(() => {
     getSearchText("");
     getSearchDate('01-01-2022');
-  });
-  return <Search getSearchText={getSearchText} searchText={searchText} isHomePage={true}/>;
+  },[]);
+  return <Search getSearchText={getSearchText}  isHomePage={true}/>;
 };
 
 export default HomePage;

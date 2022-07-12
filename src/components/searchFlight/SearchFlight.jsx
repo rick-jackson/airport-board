@@ -17,22 +17,19 @@ const SearchFlight = ({
   getSearchText,
   searchText,
   searchDate,
-  newSearchDate,
 }) => {
   const navigate = useNavigate();
-  const { search } = useLocation();
 
-  newSearchDate = QueryString.parse(search).date || searchDate;
   const searchData = QueryString.stringify({
     search: searchText,
     date: searchDate,
   });
 
+  const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
   
   useEffect(() => {
-    const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
     newPath(url, searchData);
-  },[]);
+  },[searchData]);
 
   return (
     <>

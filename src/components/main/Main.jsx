@@ -13,10 +13,7 @@ import { flightSelector } from "../../selectors/flight.selectors";
 
 const Main = ({ getFlightList, flightData }) => {
   const { search } = useLocation();
-  const newSearchDate = !QueryString.parse(search).date
-    ? "01-01-2022"
-    : QueryString.parse(search).date;
-
+  const newSearchDate = QueryString.parse(search).date || "01-01-2022";
   const searchInfo = QueryString.parse(search).search || "";
 
   const getSearchDate = (date) => {
@@ -32,7 +29,8 @@ const Main = ({ getFlightList, flightData }) => {
 
   useEffect(() => {
     getFlightList(newSearchDate);
-  },[]);
+
+  }, []);
 
   const styleBtnActive = {
     background: "#fff",
@@ -57,7 +55,6 @@ const Main = ({ getFlightList, flightData }) => {
             <HomePage
               getSearchText={getSearchText}
               getSearchDate={getSearchDate}
-              searchText={searchText}
             />
           }
         />
@@ -70,7 +67,6 @@ const Main = ({ getFlightList, flightData }) => {
               styleBtnDisabled={styleBtnDisabled}
               getSearchText={getSearchText}
               searchText={searchText}
-              newSearchDate={newSearchDate}
               searchDate={searchDate}
               flightData={flightData}
             />
@@ -85,7 +81,6 @@ const Main = ({ getFlightList, flightData }) => {
               styleBtnDisabled={styleBtnDisabled}
               getSearchText={getSearchText}
               searchText={searchText}
-              newSearchDate={newSearchDate}
               searchDate={searchDate}
               flightData={flightData}
             />
@@ -110,11 +105,6 @@ const mapState = (state) => {
 const connector = connect(mapState, mapDispatch);
 
 export default connector(Main);
-
-
-
-
-
 
 Main.propTypes = {
   getFlightList: PropTypes.func.isRequired,
