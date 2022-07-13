@@ -11,7 +11,7 @@ const Departure = ({
   getSearchText,
   searchText,
   searchDate,
-  setSearchDate
+  setSearchDate,
 }) => {
   const url = useLocation().pathname;
 

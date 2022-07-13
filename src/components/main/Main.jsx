@@ -29,7 +29,7 @@ const Main = ({ getFlightList, flightData }) => {
   const [searchText, setSearchText] = useState(searchInfo);
 
   useEffect(() => {
-    getFlightList(newSearchDate);
+    getFlightList(searchDate);
 
   }, [searchDate]);
 

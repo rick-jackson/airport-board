@@ -18,7 +18,7 @@ const SearchFlight = ({
   getSearchText,
   searchText,
   searchDate,
-  setSearchDate
+  setSearchDate,
 }) => {
   const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ const SearchFlight = ({
       {isFetching && <Spinner />}
       <div className="search__container">
         <h2 className="search__title search-flight__title">SEARCH FLIGHT</h2>
-        <SearchForm getSearchText={getSearchText} searchText={searchText} />
+        <SearchForm getSearchText={getSearchText} searchText={searchText}  />
       </div>
       <div className="search-flight-container">
         <div className="search-flight-container__nav">
