@@ -8,8 +8,8 @@ import HomePage from "../homepage/HomePage";
 import Departure from "../departure/Departure";
 import Arrival from "../arrival/Arrival";
 import PageNotFound from "../pageNotFound/PageNotFound";
-import { getFlightData } from "../../actions/flight.actions";
-import { flightSelector } from "../../selectors/flight.selectors";
+import { getFlightData } from "../../store/actions/flight.actions";
+import { flightSelector } from "../../store/selectors/flight.selectors";
 import moment from "moment";
 
 const Main = ({ getFlightList, flightData }) => {
