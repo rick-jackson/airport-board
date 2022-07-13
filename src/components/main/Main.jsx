@@ -30,7 +30,7 @@ const Main = ({ getFlightList, flightData }) => {
   useEffect(() => {
     getFlightList(newSearchDate);
 
-  }, []);
+  }, [searchDate]);
 
   const styleBtnActive = {
     background: "#fff",
@@ -55,6 +55,7 @@ const Main = ({ getFlightList, flightData }) => {
             <HomePage
               getSearchText={getSearchText}
               getSearchDate={getSearchDate}
+              searchText={searchText}
             />
           }
         />

@@ -29,7 +29,7 @@ const SearchFlight = ({
   
   useEffect(() => {
     newPath(url, searchData);
-  },[searchData]);
+  },[searchText, searchDate]);
 
   return (
     <>
