@@ -6,6 +6,7 @@ import QueryString from "qs";
 import Spinner from "../spinner/Spinner";
 import SearchForm from "../searchForm/SearchForm";
 import FlightLists from "../flightList/FligthLists";
+import ToggleDate from "../toggleDate/ToggleDate";
 
 const SearchFlight = ({
   styleBtnDeparture,
@@ -17,6 +18,7 @@ const SearchFlight = ({
   getSearchText,
   searchText,
   searchDate,
+  setSearchDate
 }) => {
   const navigate = useNavigate();
 
@@ -29,7 +31,7 @@ const SearchFlight = ({
   
   useEffect(() => {
     newPath(url, searchData);
-  },[searchText, searchDate]);
+  },[searchData]);
 
   return (
     <>
@@ -109,6 +111,7 @@ const SearchFlight = ({
           </Link>
         </div>
         <div className="flight-list">
+        <ToggleDate setSearchDate={setSearchDate} searchDate={searchDate}/>
           {!lists ||
             (lists.length <= 0 && (
               <span className="no-flight-text">No Flight</span>

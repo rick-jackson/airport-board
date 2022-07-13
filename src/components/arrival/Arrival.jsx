@@ -11,6 +11,7 @@ const Arrival = ({
   getSearchText,
   searchText,
   searchDate,
+  setSearchDate
 }) => {
   const url = useLocation().pathname;
 
@@ -25,6 +26,7 @@ const Arrival = ({
         searchDate={searchDate}
         url={url}
         btnStatus={false}
+        setSearchDate={setSearchDate}
       />
     </section>
   );

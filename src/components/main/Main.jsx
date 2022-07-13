@@ -10,10 +10,11 @@ import Arrival from "../arrival/Arrival";
 import PageNotFound from "../pageNotFound/PageNotFound";
 import { getFlightData } from "../../actions/flight.actions";
 import { flightSelector } from "../../selectors/flight.selectors";
+import moment from "moment";
 
 const Main = ({ getFlightList, flightData }) => {
   const { search } = useLocation();
-  const newSearchDate = QueryString.parse(search).date || "01-01-2022";
+  const newSearchDate = QueryString.parse(search).date || moment(new Date()).format('DD-MM-Y');
   const searchInfo = QueryString.parse(search).search || "";
 
   const getSearchDate = (date) => {
@@ -67,6 +68,7 @@ const Main = ({ getFlightList, flightData }) => {
               styleBtnActive={styleBtnActive}
               styleBtnDisabled={styleBtnDisabled}
               getSearchText={getSearchText}
+              setSearchDate={getSearchDate}
               searchText={searchText}
               searchDate={searchDate}
               flightData={flightData}
@@ -81,6 +83,7 @@ const Main = ({ getFlightList, flightData }) => {
               styleBtnActive={styleBtnActive}
               styleBtnDisabled={styleBtnDisabled}
               getSearchText={getSearchText}
+              setSearchDate={getSearchDate}
               searchText={searchText}
               searchDate={searchDate}
               flightData={flightData}

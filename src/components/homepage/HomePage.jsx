@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import Search from "../search/Search";
+import moment from "moment";
 const HomePage = ({getSearchText, getSearchDate , searchText}) => {
    searchText =''
   useEffect(() => {
     getSearchText("");
-    getSearchDate('01-01-2022');
+    getSearchDate(moment(new Date()).format('DD-MM-Y'));
   },[]);
 
   return <Search searchText={searchText} getSearchText={getSearchText}  isHomePage={true} />;
