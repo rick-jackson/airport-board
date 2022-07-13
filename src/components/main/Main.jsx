@@ -15,7 +15,7 @@ import moment from "moment";
 const Main = ({ getFlightList, flightData }) => {
   const { search } = useLocation();
   const newSearchDate = QueryString.parse(search).date || moment(new Date()).format('DD-MM-Y');
-  const searchInfo = QueryString.parse(search).search || "";
+  const searchInfo = search.split('&')[0].split('=')[1] || ''
 
   const getSearchDate = (date) => {
     setSearchDate(date);

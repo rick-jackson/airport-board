@@ -75,7 +75,7 @@ const ToggleDate = ({ setSearchDate, searchDate }) => {
             <div className="day-wrapper__date">
               {moment(new Date()).add(1, "day").format("DD/MM")}
             </div>
-            <div className="day-wrapper__day-name">TOMMOROW</div>
+            <div className="day-wrapper__day-name">TOMORROW</div>
           </div>
         </div>
         <div className="day-container__line" style={linePx}></div>
