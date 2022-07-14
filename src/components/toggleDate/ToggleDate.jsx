@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
+import PropTypes from "prop-types";
 import "./toggleDate.scss";
 
 const ToggleDate = ({ setSearchDate, searchDate }) => {
@@ -32,9 +33,7 @@ const ToggleDate = ({ setSearchDate, searchDate }) => {
   return (
     <div className="date-container">
       <div className="date-container__toggle-date">
-        <span className="date-container__selected-date">{`${
-          searchDate.split("-")[0]
-        }/${searchDate.split("-")[1]}`}</span>
+        <span className="date-container__selected-date">{`${searchDate.split[0]}/${searchDate.split[1]}`}</span>
         <input
           className="date-container__input"
           type={"date"}
@@ -85,3 +84,8 @@ const ToggleDate = ({ setSearchDate, searchDate }) => {
 };
 
 export default ToggleDate;
+
+ToggleDate.propTypes = {
+  setSearchDate: PropTypes.func.isRequired,
+  searchDate: PropTypes.string.isRequired,
+};
