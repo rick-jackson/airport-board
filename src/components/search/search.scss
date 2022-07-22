@@ -1,5 +1,5 @@
 .search {
-  background-image: url(https://iev.aero/images/main.jpg);
+  background-image: url('../../common/img/background.png');
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -33,7 +33,7 @@
   &__button {
     display: flex;
     align-items: center;
-    width: 45%;
+    max-width: 45%;
     cursor: pointer;
     padding: 10px 0px;
     border-radius: 10px;
