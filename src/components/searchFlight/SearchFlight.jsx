@@ -12,7 +12,6 @@ const SearchFlight = ({
   styleBtnDeparture,
   styleBtnArrival,
   lists,
-  btnStatus,
   isFetching,
   url,
   getSearchText,
@@ -28,25 +27,25 @@ const SearchFlight = ({
   });
 
   const newPath = (urlPage, searchInfo) => navigate(`${urlPage}?${searchInfo}`);
-  
+
   useEffect(() => {
     newPath(url, searchData);
-  },[searchData]);
+  }, [searchData]);
 
   return (
     <>
       {isFetching && <Spinner />}
       <div className="search__container">
         <h2 className="search__title search-flight__title">SEARCH FLIGHT</h2>
-        <SearchForm getSearchText={getSearchText} searchText={searchText}  />
+        <SearchForm getSearchText={getSearchText} searchText={searchText} />
       </div>
       <div className="search-flight-container">
         <div className="search-flight-container__nav">
           <Link to={"/departures"}>
             <button
-              disabled={btnStatus}
               className="search-flight-container__nav-buttons search-flight-container__nav-buttons_departures"
               style={styleBtnDeparture}
+              
             >
               <svg
                 data-v-7746f986=""
@@ -80,7 +79,6 @@ const SearchFlight = ({
             <button
               className="search-flight-container__nav-buttons search-flight-container__nav-buttons_arrivals"
               style={styleBtnArrival}
-              disabled={!btnStatus}
             >
               <svg
                 data-v-7746f986=""
@@ -111,11 +109,12 @@ const SearchFlight = ({
           </Link>
         </div>
         <div className="flight-list">
-        <ToggleDate setSearchDate={setSearchDate} searchDate={searchDate}/>
-          {!lists ||
-            (lists.length <= 0 && (
-              <span className="no-flight-text">No Flight</span>
-            )) || <FlightLists lists={lists} searchText={searchText} />}
+          <ToggleDate setSearchDate={setSearchDate} searchDate={searchDate} />
+          {!Array.isArray(lists) ||
+            lists.length <= 0 
+             && <span className="no-flight-text">No Flight</span> || (
+              <FlightLists lists={lists} searchText={searchText} />
+            )}
         </div>
       </div>
     </>
@@ -132,13 +131,11 @@ const connector = connect(mapState);
 
 export default connector(SearchFlight);
 
-
 SearchFlight.propTypes = {
   styleBtnDeparture: PropTypes.object.isRequired,
   styleBtnArrival: PropTypes.object.isRequired,
   lists: PropTypes.array.isRequired,
   isFetching: PropTypes.bool.isRequired,
-  btnStatus: PropTypes.bool.isRequired,
   url: PropTypes.string.isRequired,
   searchText: PropTypes.string.isRequired,
   searchDate: PropTypes.string.isRequired,

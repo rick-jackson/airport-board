@@ -32,6 +32,10 @@ const Main = ({ getFlightList, flightData }) => {
     getFlightList(searchDate);
   }, [searchDate]);
 
+  // useEffect(()=>{
+
+  // },[search])
+
   const styleBtnActive = {
     background: "#fff",
     color: "#43bfec",

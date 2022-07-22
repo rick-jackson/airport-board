@@ -8,8 +8,8 @@ const Header = () => {
       <Link to="/">
         <img
           className="header__logo"
-          src="https://iev.aero/_nuxt/img/logo@2x.2d2c20b.png"
           alt="Header logo"
+          src="../../common/img/logo.png"
         />
       </Link>
 

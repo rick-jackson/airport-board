@@ -21,7 +21,6 @@ const Departure = ({
         lists={flightData.departure}
         styleBtnDeparture={styleBtnActive}
         styleBtnArrival={styleBtnDisabled}
-        btnStatus={true}
         url={url}
         getSearchText={getSearchText}
         searchText={searchText}

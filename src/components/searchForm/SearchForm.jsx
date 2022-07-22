@@ -19,7 +19,7 @@ const SearchForm = ({ getSearchText, searchText, isHomePage }) => {
     <div className="search__line-container line-container">
       <img
         className="line-container__search-img"
-        src="https://cdn.icon-icons.com/icons2/412/PNG/128/Magnifier_41051.png"
+        src="../../common/img/search.png"
         alt="search-logo"
       />
       <form className="line-container__form" action="">
