@@ -10,6 +10,8 @@
   box-shadow: -2px 3px 25px 2px rgba(0, 0, 0, 0.54);
 
   &__logo {
+    background-image: url('../../common/img/logo@2x (1).webp');
+    background-size: contain;
     cursor: pointer;
     margin-left: 50px;
     width: 180px;
@@ -17,9 +19,9 @@
   }
 
   &__nav {
+    display: flex;
     color: #fff;
     margin-left: auto;
-    display: none;
     list-style: none;
   }
   
