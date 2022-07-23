@@ -50,9 +50,10 @@
 
   &__line {
     position: relative;
+    transition: 0.2s;
     &:hover{
       z-index: 1;
-      box-shadow: inset -1px 3px 8px 5px #ebebeb, 2px 5px 16px 0px #020911, 0px 1px 35px 11px rgba(0,0,0,0);
+      box-shadow: inset -1px 3px 8px 5px #ebebeb, 2px 5px 16px 0px #69696957, 0px 1px 35px 11px rgba(0,0,0,0);
     }
     height: 80px;
     background-color: #fff;
