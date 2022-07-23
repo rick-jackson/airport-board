@@ -1,5 +1,7 @@
 .date-container {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 50px;
   color: #1eb7ee;
   letter-spacing: 1px;
   display: flex;
@@ -37,7 +39,7 @@
   text-align: center;
   align-items: center;
   position: relative;
-  border-bottom: 3px solid #a3a3a3;
+  border-bottom: 3px solid #d4d4d4;
 
   &__container {
     &:first-child {
@@ -67,6 +69,6 @@
     background-color: #1eb7ee;
     bottom: -3px;
     position: absolute;
-    transition: 1s;
+    transition: 0.3s;
   }
 }

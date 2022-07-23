@@ -8,7 +8,7 @@ const FlightLists = ({ lists, searchText }) => {
     <>
       <table className="flight-list__lists lists">
         <thead>
-          <tr className="lists__line first-line">
+          <tr className=" first-line">
             <td className=" lists__item">Terminal</td>
             <td className=" lists__item">Local time</td>
             <td className=" lists__item">Destination</td>

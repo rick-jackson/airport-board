@@ -5,7 +5,7 @@ import "./toggleDate.scss";
 
 const ToggleDate = ({ setSearchDate, searchDate }) => {
   const [date, setDate] = useState(searchDate);
-  const [linePx, setLinePs] = useState({ right: "33.33%" });
+  const [linePx, setLinePs] = useState({  display: "none"  });
 
   const handleChange = (e) => {
     setDate(moment(new Date(e.target.value)).format("DD-MM-Y"));

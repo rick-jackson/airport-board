@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const CreateList = ({ flightData }) => {
   return (
-    <tr className="lists__line first-line">
+    <tr className="lists__line">
       <td className=" lists__item">
         <span
           className={
